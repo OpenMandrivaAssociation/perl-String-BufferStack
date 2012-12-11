@@ -1,19 +1,19 @@
 %define upstream_name    String-BufferStack
 %define upstream_version 1.15
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    Nested buffers for templating systems
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Nested buffers for templating systems
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(ExtUtils::MakeMaker)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildArch:	noarch
 
 %description
 'String::BufferStack' provides a framework for storing nested buffers. By
@@ -25,24 +25,25 @@ a scalar reference.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc META.yml Changes README
 %{_mandir}/man3/*
-%perl_vendorlib/String/
+%{perl_vendorlib}/String/
+
+%changelog
+* Fri Apr 30 2010 Michael Scherer <misc@mandriva.org> 1.150.0-1mdv2010.1
++ Revision: 541107
+- import perl-String-BufferStack
 
 
+* Fri Apr 30 2010 cpan2dist 1.15-1mdv
+- initial mdv release, generated with cpan2dist
