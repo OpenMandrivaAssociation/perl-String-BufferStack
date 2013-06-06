@@ -1,6 +1,5 @@
 %define upstream_name    String-BufferStack
-%define upstream_version 1.15
-
+%define upstream_version 1.16
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.16
 Release:	1
