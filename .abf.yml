@@ -1,2 +1,4 @@
+removed_sources:
+  String-BufferStack-1.15.tar.gz: b025f980bebc620f4f376dd6ecaa6992b3484559
 sources:
-  "String-BufferStack-1.15.tar.gz": b025f980bebc620f4f376dd6ecaa6992b3484559
+  String-BufferStack-1.16.tar.gz: cc3d7374984fb732eebc758035b08efaf6570282
