@@ -2,7 +2,7 @@
 %define upstream_version 1.16
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.16
-Release:	2
+Release:	3
 
 Summary:	Nested buffers for templating systems
 License:	GPL+ or Artistic
