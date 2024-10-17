@@ -7,7 +7,7 @@ Release:	3
 Summary:	Nested buffers for templating systems
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/String/String-BufferStack-1.16.tar.gz
 
 BuildRequires:	perl-devel
